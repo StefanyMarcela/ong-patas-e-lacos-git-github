@@ -2,58 +2,61 @@
 
 ## Sobre o projeto
 
-O projeto **ONG Patas & Laços** foi desenvolvido como atividade acadêmica da disciplina de **Desenvolvimento Front-End para Web**, como parte da **Experiência Prática III**.
+O projeto **ONG Patas & Laços** foi desenvolvido como atividade acadêmica da disciplina de **Desenvolvimento Front-End para Web**, como parte da **Experiência Prática IV**.
 
 O site apresenta uma ONG fictícia voltada à proteção e ao bem-estar dos animais, mostrando seus projetos e permitindo que pessoas interessadas realizem um cadastro para participar das ações.
 
-Nesta etapa, a interface anteriormente estática foi transformada em uma aplicação dinâmica utilizando **JavaScript**, com recursos de manipulação do DOM, navegação SPA, validação de formulários e armazenamento de dados.
+Nesta etapa, o projeto foi aprimorado com práticas de desenvolvimento mais próximas de um fluxo profissional, incluindo controle de versões com Git e GitHub, organização por branches utilizando GitFlow, melhorias de acessibilidade, otimizações de carregamento e documentação técnica.
 
 ## Tecnologias utilizadas
 
-- HTML5
-- CSS3
-- JavaScript
-- DOM
-- History API
-- localStorage
-- ViaCEP API
+* HTML5
+* CSS3
+* JavaScript
+* DOM
+* History API
+* localStorage
+* ViaCEP API
+* Git
+* GitHub
 
 ## Páginas
 
-- **Início:** apresentação da ONG, informações institucionais, indicadores e dados de contato.
-- **Projetos:** apresentação das principais iniciativas da ONG por meio de cards.
-- **Cadastro:** formulário para pessoas interessadas em participar das ações.
+* **Início:** apresentação da ONG, informações institucionais, indicadores e dados de contato.
+* **Projetos:** apresentação das principais iniciativas da ONG por meio de cards.
+* **Cadastro:** formulário para pessoas interessadas em participar das ações.
 
 ## Funcionalidades
 
-- Navegação dinâmica entre as páginas.
-- Estrutura de Single Page Application (SPA).
-- Renderização das páginas por meio de templates JavaScript.
-- Manipulação do DOM.
-- Navegação utilizando History API.
-- Interceptação dos links de navegação.
-- Máscara para CPF, telefone e CEP.
-- Preenchimento automático de endereço por meio do CEP.
-- Consulta de endereço utilizando a API ViaCEP.
-- Validação dos campos do formulário.
-- Validação de e-mail.
-- Prevenção do envio padrão do formulário.
-- Mensagem de confirmação após o cadastro.
-- Armazenamento dos cadastros utilizando localStorage.
-- Possibilidade de armazenar múltiplos cadastros.
-- Limpeza do formulário após o cadastro.
-- Cards para apresentação dos projetos.
-- Menu hambúrguer para dispositivos menores.
-- Layout responsivo.
-- Efeitos de interação com `hover` e `focus`.
-- Suporte à redução de movimentos para acessibilidade.
+* Navegação dinâmica entre as páginas.
+* Estrutura de Single Page Application (SPA).
+* Renderização das páginas por meio de templates JavaScript.
+* Manipulação do DOM.
+* Navegação utilizando History API.
+* Interceptação dos links de navegação.
+* Máscara para CPF, telefone e CEP.
+* Preenchimento automático de endereço por meio do CEP.
+* Consulta de endereço utilizando a API ViaCEP.
+* Validação dos campos do formulário.
+* Validação de e-mail.
+* Prevenção do envio padrão do formulário.
+* Mensagem de confirmação após o cadastro.
+* Armazenamento dos cadastros utilizando localStorage.
+* Possibilidade de armazenar múltiplos cadastros.
+* Limpeza do formulário após o cadastro.
+* Cards para apresentação dos projetos.
+* Menu hambúrguer para dispositivos menores.
+* Layout responsivo.
+* Efeitos de interação com `hover` e `focus`.
+* Suporte à redução de movimentos para acessibilidade.
 
 ## Estrutura do projeto
 
 O projeto foi organizado seguindo o princípio de **separation of concerns**, mantendo os arquivos separados de acordo com suas responsabilidades.
 
 ```text
-ONG3/
+ONG4/
+
 ├── html/
 │   ├── index.html
 │   ├── projetos.html
@@ -92,11 +95,11 @@ Foram definidas variáveis para cores primárias, secundárias, acentos, textos,
 
 O sistema possui cinco níveis de tamanhos tipográficos:
 
-- Extra pequeno
-- Pequeno
-- Médio
-- Grande
-- Extra grande
+* Extra pequeno
+* Pequeno
+* Médio
+* Grande
+* Extra grande
 
 ### Espaçamento
 
@@ -114,40 +117,80 @@ O JavaScript foi organizado de forma modular, separando as responsabilidades ent
 
 O arquivo **`app.js`** concentra as principais funcionalidades da aplicação, como:
 
-- Templates das páginas.
-- Rotas da aplicação.
-- Renderização dinâmica.
-- Manipulação do DOM.
-- Navegação com History API.
-- Validação do formulário.
-- Máscaras dos campos.
-- Consulta à API ViaCEP.
-- Armazenamento dos cadastros no localStorage.
+* Templates das páginas.
+* Rotas da aplicação.
+* Renderização dinâmica.
+* Manipulação do DOM.
+* Navegação com History API.
+* Validação do formulário.
+* Máscaras dos campos.
+* Consulta à API ViaCEP.
+* Armazenamento dos cadastros no localStorage.
 
 O arquivo **`script.js`** é responsável pelo comportamento do menu hambúrguer e pela interação do menu em dispositivos menores.
 
 Essa divisão facilita a manutenção, a depuração e a evolução do código.
 
+## Git e GitFlow
+
+O projeto utiliza **Git** para controle de versões.
+
+Foi adotada uma estrutura baseada em **GitFlow**, utilizando branches para separar o desenvolvimento das funcionalidades.
+
+Branches utilizadas:
+
+* `main`: versão principal e estável do projeto.
+* `develop`: branch utilizada para integração das funcionalidades.
+* `feature/acessibilidade`: desenvolvimento das melhorias de acessibilidade.
+* `feature/performance`: desenvolvimento das otimizações de desempenho.
+
+Foram utilizados commits semânticos para identificar o objetivo de cada alteração, como:
+
+* `chore: inicia projeto da Experiência Prática IV`
+* `feat: melhora acessibilidade do menu e navegacao`
+* `perf: otimiza carregamento das imagens`
+
+## Acessibilidade
+
+Foram implementadas melhorias de acessibilidade com base em boas práticas relacionadas à **WCAG 2.1**, incluindo:
+
+* Uso do atributo `lang="pt-BR"`.
+* Textos alternativos nas imagens.
+* Estrutura semântica em HTML5.
+* Campos de formulário associados às respectivas labels.
+* Navegação por teclado.
+* Indicadores visuais de foco.
+* Atributos `aria-label`, `aria-expanded` e `aria-controls` no menu hambúrguer.
+* Atualização do estado do menu para tecnologias assistivas.
+* Suporte à preferência de redução de movimentos.
+* Contraste adequado entre textos e fundos.
+
+## Otimização e desempenho
+
+Foram realizadas melhorias para otimizar o carregamento dos recursos da aplicação.
+
+As imagens utilizadas na página de projetos receberam o atributo `loading="lazy"`, permitindo que sejam carregadas conforme se aproximam da área visível da página.
+
+Também foram definidas dimensões `width` e `height` nas imagens para que o navegador consiga reservar o espaço necessário antes do carregamento dos arquivos, reduzindo mudanças inesperadas no layout.
+
 ## Responsividade
 
 O layout possui breakpoints para diferentes tamanhos de tela:
 
-- Desktop
-- Tablet
-- Celular
+* Desktop
+* Tablet
+* Celular
+* Celulares pequenos
 
 As estruturas são adaptadas para proporcionar uma experiência adequada em diferentes dispositivos.
 
-## Acessibilidade
+## Como executar o projeto
 
-Foram aplicadas algumas práticas de acessibilidade, como:
-
-- Textos alternativos nas imagens.
-- Estrutura semântica em HTML5.
-- Indicadores visuais de foco.
-- Contraste adequado entre textos e fundos.
-- Suporte à preferência de redução de movimentos.
-- Campos de formulário associados às respectivas labels.
+1. Baixe ou clone o repositório.
+2. Abra a pasta `ONG4` no Visual Studio Code.
+3. Abra o arquivo `html/index.html`.
+4. Execute o projeto utilizando uma extensão de servidor local, como o Live Server.
+5. Acesse a aplicação pelo navegador.
 
 ## Créditos das imagens
 
