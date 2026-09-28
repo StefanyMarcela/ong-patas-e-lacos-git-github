@@ -481,6 +481,13 @@ small {
         cursor: pointer;
    }
 
+   .menu-hamburguer:focus-visible {
+    outline: 3px solid var(--cor-acento);
+    outline-offset: 3px;
+    border-radius: 4px;
+    
+   }
+
     .menu-links {
         display: none;
         flex-direction: column;
